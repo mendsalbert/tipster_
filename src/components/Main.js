@@ -30,11 +30,12 @@ class Main extends Component {
         <div className="row">
           <main
             role="main"
-            className="flex flex-row justify-between w-full mx-20 "
+            // className="flex flex-row justify-between w-full mx-20 "
+            className="grid grid-col-5  mx-20 "
             // className="col-lg-12 ml-auto mr-auto"
             // style={{ maxWidth: "700px" }}
           >
-            <div className="w-3/12 mr-3 ">
+            <div className="col-span-1 ">
               <div className="bg-white rounded-t mt-4 p-4 space-y-3 mb-4 shadow-md">
                 <span>Post about</span>
                 <div className="flex flex-row items-center space-x-4 ">
@@ -55,7 +56,7 @@ class Main extends Component {
                 </div>
               </div>
             </div>
-            <div className="content w-6/12 mr-auto ml-auto">
+            <div className="content col-span-3 mr-auto ml-auto">
               <div>
                 <div className="bg-white rounded-t mt-4  mb-4 shadow-md">
                   <form
@@ -307,7 +308,7 @@ class Main extends Component {
                   );
                 })}
             </div>
-            <div className="w-3/12 ml-3 ">
+            <div className="col-span-1 ">
               <div className="bg-white rounded-t mt-4 p-4 space-y-3 mb-4 shadow-md">
                 <span>Top Accounts</span>
                 {this.props.images
