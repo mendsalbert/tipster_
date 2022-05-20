@@ -22,7 +22,7 @@ function Header() {
     //     </div>
     //   </div>
     // </div>
-    <div className="flex flex-col   justify-center items-center pt-8">
+    <div className="flex flex-col   justify-center items-center pt-8 mb-5">
       <div className="bg-white px-28 py-8  flex flex-col justify-center items-center w-max shadow-md rounded-md">
         <div>
           <Avatar logoutOnPress />
