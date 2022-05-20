@@ -21,7 +21,11 @@ function Header() {
     //     </div>
     //   </div>
     // </div>
-    <div></div>
+    <div className="flex flex-col justify-center">
+      <div>
+        <Avatar logoutOnPress />
+      </div>
+    </div>
   );
 }
 
