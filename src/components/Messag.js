@@ -7,8 +7,8 @@ function Messag({ messag }) {
   const isUserMessage = messag.get("ethAddress") === user.get("ethAddress");
   return (
     <div
-      className={`mx-20  flex flex-row items-center space-x-2 my-2  ${
-        isUserMessage ? "justify-end" : "justify-start"
+      className={`mx-20  flex flex-row items-center space-x-2 my-1  ${
+        isUserMessage ? "justify-start" : "justify-start"
       }`}
     >
       {/* <div
@@ -21,15 +21,27 @@ function Messag({ messag }) {
         <p>{messag.get("message")}</p>
       </div> */}
       <div className="">
-        <div className="flex flex-row items-center">
-          <div className="rounded-t-lg rounded-bl-lg  bg-green-600 text-white px-6 py-2 ">
+        <div
+          className={`flex ${
+            !isUserMessage ? "flex-row " : "flex-row-reverse"
+          } items-center `}
+        >
+          <div
+            className={` ${
+              !isUserMessage
+                ? " rounded-t-lg rounded-bl-lg bg-green-600"
+                : "rounded-t-lg rounded-br-lg bg-blue-600"
+            }  text-white px-6 py-2 `}
+          >
             {messag.get("message")}
           </div>
           <div className="w-7 h-7">
             <Avatar username={messag.get("username")} />
           </div>
         </div>
-        <p></p>
+        <p className={`${!isUserMessage ? "text-left" : "text-left"}`}>
+          {messag.get("username")}
+        </p>
       </div>
 
       {/* <div
