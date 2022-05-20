@@ -13,6 +13,7 @@ import {
   MusicNoteIcon,
   PhotographIcon,
   SupportIcon,
+  VideoCameraIcon,
 } from "@heroicons/react/outline";
 import { ellipseAddress } from "../lib/helpers";
 
@@ -92,6 +93,13 @@ class Main extends Component {
                         onChange={this.props.captureFile}
                       />
                       <p className="mb-4">Photo</p>
+                      <VideoCameraIcon
+                        onClick={() => {
+                          this.upload.click();
+                        }}
+                        className="h-6 text-gray-500"
+                      />
+                      <p className="mb-4">Video</p>
                       <button
                         type="submit"
                         className="bg-gradient-to-r active:outline-none active:border-none border-2 px-3 border-green-500 text-center w-max rounded-full cursor-pointer text-green-500"
@@ -180,10 +188,18 @@ class Main extends Component {
                       </Link>
                       <div>
                         <div class="w-full h-full">
-                          <img
+                          <div className="object-cover h-96 w-full">
+                            <iframe
+                              className=" aspect-video w-full h-screen "
+                              align="middle"
+                              src={`https://ipfs.infura.io/ipfs/${image.hash}`}
+                            ></iframe>
+                          </div>
+
+                          {/* <img
                             src={`https://ipfs.infura.io/ipfs/${image.hash}`}
                             className="object-cover h-96 w-full"
-                          />
+                          /> */}
                         </div>
                       </div>
                       <div className="p-4 flex flex-row justify-between items-center">
