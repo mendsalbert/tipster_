@@ -23,7 +23,7 @@ function Header() {
     //   </div>
     // </div>
     <div className="flex flex-col   justify-center items-center pt-8">
-      <div className="bg-white p-5 items-center w-max shadow-md rounded-md">
+      <div className="bg-white px-28 py-8  flex flex-col justify-center items-center w-max shadow-md rounded-md">
         <div>
           <Avatar logoutOnPress />
         </div>
@@ -34,6 +34,7 @@ function Header() {
         <h2 className="text-gray-500 -mt-3 text-xl font-bold">
           Welcome {user.getUsername()}
         </h2>
+        <ChangeUsername />
       </div>
     </div>
   );
