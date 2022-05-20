@@ -1,29 +1,28 @@
-import React from 'react'
+import React from "react";
 import { useMoralis } from "react-moralis";
 import Avatar from "./Avatar";
 import ChangeUsername from "./ChangeUsername";
-import photo from '../photo.png';
+import photo from "../photo.png";
 
 function Header() {
-    const {user}=useMoralis();
-    return (
-        <div className="container-fluid bg-dark mt-3">
-            <div className="row">
-                <div className="col">
-                <img src={photo} width="100" height="100" className="d-inline-block align-top" alt="" />
-                </div>
-                <div className="col" align='center'>
-                <div className="mt-5 border-4 rounded-circle">
-                    <div><Avatar logoutOnPress/></div>
-                </div>
-                <h2 className="text-white font-bold">Welcome {user.getUsername()}</h2>
-                </div>
-                <div className="col mt-5" align='right'>
-                <ChangeUsername/>
-                </div>
-            </div>
-        </div>
-    )
+  const { user } = useMoralis();
+  //   Welcome {user.getUsername()}
+  return (
+    // <div className="w-8/12 pt-4">
+    //   <div className="row">
+    //     <div className="col" align="center">
+    //       <div>
+    //         <Avatar logoutOnPress />
+    //       </div>
+    //       <h2 className="text-white font-bold">Welcome {user.getUsername()}</h2>
+    //     </div>
+    //     <div className="col mt-5" align="right">
+    //       <ChangeUsername />
+    //     </div>
+    //   </div>
+    // </div>
+    <div></div>
+  );
 }
 
 export default Header;
