@@ -17,7 +17,7 @@ class Navbar extends Component {
         <div className="hidden md:block">
           <img src="/photo.png" className="w-20" />
         </div>
-        <div className="flex flex-row items-center justify-center text-gray-600 space-x-5 py-4 md:space-x-20 md:py-2">
+        <div className="flex flex-row items-center justify-center text-gray-600 space-x-8 py-4 md:space-x-20 md:py-2">
           <a href="/">
             <HomeIcon className="h-8 text-green-500" />
           </a>
@@ -52,40 +52,7 @@ class Navbar extends Component {
             {/* {this.props.account} */}
           </p>
         </div>
-
-        {/* <div className="flex flex-row items-center justify-center space-x-6 py-2">
-          <button className="bg-gradient-to-r active:outline-none active:border-none from-green-600 via-green-700  to-green-900 text-center w-max   px-8 py-2  rounded-full cursor-pointer text-white">
-            Connect
-          </button>
-        </div> */}
       </nav>
-      // <nav className="navbar navbar-dark fixed-top bg-white flex-md-nowrap p-0 shadow">
-      //   <Menu />
-      //   <ul className="navbar-nav px-3">
-      //     <li className="nav-item text-nowrap d-none d-sm-none d-sm-block">
-      //       {this.props.account ? (
-      //         <img
-      //           className="ml-2"
-      //           width="30"
-      //           height="30"
-      //           src={`data:image/png;base64,${new Identicon(
-      //             this.props.account,
-      //             30
-      //           ).toString()}`}
-      //           alt="identicon"
-      //         />
-      //       ) : (
-      //         <span></span>
-      //       )}
-      //       <small className="text-secondary">
-      //         <small id="account">{this.props.account}</small>
-      //       </small>
-      //       <p className="text-red-500 text-lg">
-      //         React and Tailwind CSS in action.....
-      //       </p>
-      //     </li>
-      //   </ul>
-      // </nav>
     );
   }
 }
