@@ -190,7 +190,7 @@ class Main extends Component {
                         <div class="w-full h-full">
                           <div className="object-cover h-96 w-full">
                             <iframe
-                              className=" aspect-video w-full h-screen "
+                              className=" aspect-video "
                               align="middle"
                               src={`https://ipfs.infura.io/ipfs/${image.hash}`}
                             ></iframe>
