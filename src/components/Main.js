@@ -31,7 +31,7 @@ class Main extends Component {
           <main
             role="main"
             // className="flex flex-row justify-between w-full mx-20 "
-            className="grid grid-col-5   "
+            className="grid grid-col-3  "
             // className="col-lg-12 ml-auto mr-auto"
             // style={{ maxWidth: "700px" }}
           >
