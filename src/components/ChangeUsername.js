@@ -15,7 +15,7 @@ function ChangeUsername() {
       <button
         disabled={isUserUpdating}
         onClick={setUsername}
-        className="bg-gradient-to-r active:outline-none active:border-none border-2 px-3 border-green-500 text-center w-max rounded-full cursor-pointer text-green-500"
+        className="bg-gradient-to-r text-lg active:outline-none active:border-none border-2 px-3 py-2 border-green-500 text-center w-max rounded-full cursor-pointer text-green-500"
       >
         Change username
       </button>
