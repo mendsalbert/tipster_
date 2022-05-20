@@ -6,7 +6,14 @@ import * as IoIcons from "react-icons/io";
 import { RWebShare } from "react-web-share";
 
 import { Link } from "react-router-dom";
-import { CashIcon, PhotographIcon } from "@heroicons/react/outline";
+import {
+  BookOpenIcon,
+  CashIcon,
+  HeartIcon,
+  MusicNoteIcon,
+  PhotographIcon,
+  SupportIcon,
+} from "@heroicons/react/outline";
 import { ellipseAddress } from "../lib/helpers";
 
 class Main extends Component {
@@ -23,10 +30,32 @@ class Main extends Component {
         <div className="row">
           <main
             role="main"
-            className="col-lg-12 ml-auto mr-auto"
-            style={{ maxWidth: "700px" }}
+            className="flex flex-row justify-between w-full mx-20 "
+            // className="col-lg-12 ml-auto mr-auto"
+            // style={{ maxWidth: "700px" }}
           >
-            <div className="content mr-auto ml-auto">
+            <div className="w-3/12 mr-3 ">
+              <div className="bg-white rounded-t mt-4 p-4 space-y-3 mb-4 shadow-md">
+                <span>Post about</span>
+                <div className="flex flex-row items-center space-x-4 ">
+                  <BookOpenIcon className="h-7" />
+                  <span>Education</span>
+                </div>
+                <div className="flex flex-row items-center space-x-4 ">
+                  <HeartIcon className="h-7" />
+                  <span>Health</span>
+                </div>
+                <div className="flex flex-row items-center space-x-4 ">
+                  <SupportIcon className="h-7" />
+                  <span>Sports</span>
+                </div>
+                <div className="flex flex-row items-center space-x-4 ">
+                  <MusicNoteIcon className="h-7" />
+                  <span>Entertainment</span>
+                </div>
+              </div>
+            </div>
+            <div className="content w-6/12 mr-auto ml-auto">
               <div>
                 <div className="bg-white rounded-t mt-4  mb-4 shadow-md">
                   <form
@@ -278,15 +307,23 @@ class Main extends Component {
                   );
                 })}
             </div>
-            {/* <div className="d-flex float-right fixed-bottom m-3">
-              <Button
-                variant="outline-success"
-                type="submit"
-                onClick={() => window.location.reload(false)}
-              >
-                <IoIcons.IoMdRefresh size={23} />
-              </Button>
-            </div> */}
+            <div className="w-3/12 ml-3 ">
+              <div className="bg-white rounded-t mt-4 p-4 space-y-3 mb-4 shadow-md">
+                <span>Top Accounts</span>
+                {this.props.images
+                  .sort((a, b) => a.tipAmount - b.tipAmount)
+                  .map((image) => {
+                    return (
+                      <>
+                        <div className="flex flex-row items-center space-x-4 ">
+                          <BookOpenIcon className="h-7" />
+                          <span>{ellipseAddress(image.author)}</span>
+                        </div>
+                      </>
+                    );
+                  })}
+              </div>
+            </div>
           </main>
         </div>
       </div>

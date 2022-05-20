@@ -23,12 +23,12 @@ function Messag({ messag }) {
       <div className="">
         <div
           className={`flex ${
-            !isUserMessage ? "flex-row " : "flex-row-reverse"
+            isUserMessage ? "flex-row " : "flex-row-reverse"
           } items-center `}
         >
           <div
             className={` ${
-              !isUserMessage
+              isUserMessage
                 ? " rounded-t-lg rounded-bl-lg bg-green-600"
                 : "rounded-t-lg rounded-br-lg bg-blue-600"
             }  text-white px-6 py-2 `}
@@ -39,7 +39,7 @@ function Messag({ messag }) {
             <Avatar username={messag.get("username")} />
           </div>
         </div>
-        <p className={`${!isUserMessage ? "text-left" : "text-left"}`}>
+        <p className={`${isUserMessage ? "text-left" : "text-left"}`}>
           {messag.get("username")}
         </p>
       </div>
