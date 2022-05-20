@@ -20,11 +20,16 @@ function Messag({ messag }) {
       >
         <p>{messag.get("message")}</p>
       </div> */}
-      <div>
-        <div className="rounded-t-lg rounded-bl-lg  bg-green-600 text-white px-6 py-2 ">
-          {messag.get("message")}
+      <div className="">
+        <div className="flex flex-row items-center">
+          <div className="rounded-t-lg rounded-bl-lg  bg-green-600 text-white px-6 py-2 ">
+            {messag.get("message")}
+          </div>
+          <div className="w-7 h-7">
+            <Avatar username={messag.get("username")} />
+          </div>
         </div>
-        <div>55</div>
+        <p></p>
       </div>
 
       {/* <div
