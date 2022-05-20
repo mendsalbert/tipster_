@@ -3,6 +3,7 @@ import { useMoralis } from "react-moralis";
 import Avatar from "./Avatar";
 import ChangeUsername from "./ChangeUsername";
 import photo from "../photo.png";
+import { StatusOnlineIcon } from "@heroicons/react/outline";
 
 function Header() {
   const { user } = useMoralis();
@@ -21,9 +22,18 @@ function Header() {
     //     </div>
     //   </div>
     // </div>
-    <div className="flex flex-col justify-center">
-      <div>
-        <Avatar logoutOnPress />
+    <div className="flex flex-col   justify-center items-center pt-8">
+      <div className="bg-white p-5 items-center w-max shadow-md rounded-md">
+        <div>
+          <Avatar logoutOnPress />
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <StatusOnlineIcon className="h-8 mt-2 text-green-600" />
+          <p className="text-green-600 -mt-2">Online</p>
+        </div>
+        <h2 className="text-gray-500 -mt-3 text-xl font-bold">
+          Welcome {user.getUsername()}
+        </h2>
       </div>
     </div>
   );
