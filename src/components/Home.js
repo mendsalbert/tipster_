@@ -47,7 +47,7 @@ class Home extends Component {
     // Load account
     const accounts = await web3.eth.getAccounts();
     this.setState({ account: accounts[0] });
-    // Network ID
+    // // Network ID
     const networkId = await web3.eth.net.getId();
     const networkData = Tipster.networks[networkId];
     if (networkData) {

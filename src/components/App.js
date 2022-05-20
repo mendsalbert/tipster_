@@ -166,7 +166,12 @@ class App extends Component {
             <Route path="/" exact element={<Home />} />
             <Route
               path="/profile"
-              element={<Profile images={this.state.images} />}
+              element={
+                <Profile
+                  images={this.state.images}
+                  tipImageOwner={this.tipImageOwner}
+                />
+              }
             />
             <Route
               path="/myprofile"
@@ -174,12 +179,18 @@ class App extends Component {
                 <MyProfile
                   images={this.state.images}
                   account={this.state.account}
+                  tipImageOwner={this.tipImageOwner}
                 />
               }
             />
             <Route
               path="/explore"
-              element={<Explore images={this.state.images} />}
+              element={
+                <Explore
+                  images={this.state.images}
+                  tipImageOwner={this.tipImageOwner}
+                />
+              }
             />
             <Route path="/messagemain" element={<MessageMain />} />
           </Routes>

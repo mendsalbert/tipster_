@@ -7,7 +7,7 @@ function Messag({ messag }) {
   const isUserMessage = messag.get("ethAddress") === user.get("ethAddress");
   return (
     <div
-      className={`mx-20  flex flex-row items-center space-x-2 my-1  ${
+      className={`px-6 md:mx-20  flex flex-row items-center space-x-2 my-1  ${
         isUserMessage ? "justify-end" : "justify-start"
       }`}
     >
@@ -39,7 +39,7 @@ function Messag({ messag }) {
             <Avatar username={messag.get("username")} />
           </div>
         </div>
-        <p className={`${isUserMessage ? "text-left" : "text-left"}`}>
+        <p className={`${isUserMessage ? "text-right" : "text-left"}`}>
           {messag.get("username")}
         </p>
       </div>

@@ -76,27 +76,20 @@ class MyProfile extends Component {
               .map((image, key) => {
                 return (
                   <div className="bg-white rounded-md shadow-md my-4 w-full ">
-                    <Link
-                      to="/profile"
-                      state={{
-                        id: image.id.toString(),
-                        author: image.author,
-                      }}
-                    >
-                      <div className=" p-4 flex flex-row items-center space-x-2">
-                        <img
-                          className="rounded-full"
-                          width="40"
-                          height="40"
-                          src={`data:image/png;base64,${new Identicon(
-                            image.author,
-                            30
-                          ).toString()}`}
-                          alt="identicon"
-                        />
-                        <p>{ellipseAddress(image.author)}</p>
-                      </div>
-                    </Link>
+                    <div className=" p-4 flex flex-row items-center space-x-2">
+                      <img
+                        className="rounded-full"
+                        width="40"
+                        height="40"
+                        src={`data:image/png;base64,${new Identicon(
+                          image.author,
+                          30
+                        ).toString()}`}
+                        alt="identicon"
+                      />
+                      <p>{ellipseAddress(image.author)}</p>
+                    </div>
+
                     <div>
                       <div class="w-full h-full">
                         <img

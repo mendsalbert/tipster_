@@ -31,7 +31,7 @@ class Main extends Component {
         <div className="row">
           <main
             role="main"
-            className="flex flex-row md:space-x-7 px-4 md:px-0 overflow-hidden w-full md:mx-20"
+            className="flex flex-row md:space-x-7 px-6 md:px-0 overflow-hidden w-full md:mx-20"
           >
             <div className="w-2/12 hidden md:block ">
               <div className="bg-white rounded-t mt-4 p-4 space-y-3 mb-4 shadow-md">
