@@ -63,7 +63,7 @@ class ProfileHeader extends Component {
                             width="80"
                             height="80"
                             src={`data:image/png;base64,${new Identicon(
-                              this.props.account,
+                              image.account,
                               30
                             ).toString()}`}
                             alt="identicon"
@@ -75,7 +75,7 @@ class ProfileHeader extends Component {
 
                         <h2 className="text-white">
                           <p className="text-gray-700 text-xl font-bold">
-                            {ellipseAddress(this.props.account)}
+                            {ellipseAddress(image.account)}
                           </p>
                         </h2>
                       </div>
