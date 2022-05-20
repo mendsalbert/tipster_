@@ -64,7 +64,7 @@ class MyProfile extends Component {
                   </div>
                   <h2 className="text-white">
                     <p className="text-gray-700 text-xl font-bold">
-                      {this.props.account}
+                      {ellipseAddress(this.props.account)}
                     </p>
                   </h2>
                 </div>

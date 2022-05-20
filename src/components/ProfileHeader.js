@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Identicon from "identicon.js";
 import { StatusOnlineIcon } from "@heroicons/react/outline";
+import { ellipseAddress } from "../lib/helpers";
 
 class ProfileHeader extends Component {
   // constructor(props) {
@@ -74,7 +75,7 @@ class ProfileHeader extends Component {
 
                         <h2 className="text-white">
                           <p className="text-gray-700 text-xl font-bold">
-                            {this.props.account}
+                            {ellipseAddress(this.props.account)}
                           </p>
                         </h2>
                       </div>
