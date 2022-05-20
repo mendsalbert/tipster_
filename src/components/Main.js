@@ -30,12 +30,12 @@ class Main extends Component {
         <div className="row">
           <main
             role="main"
-            // className="flex flex-row justify-between w-full mx-20 "
-            className="grid grid-col-3  "
+            className="flex flex-row space-x-7  overflow-hidden w-full mx-20 "
+            // className="grid grid-col-3   "
             // className="col-lg-12 ml-auto mr-auto"
             // style={{ maxWidth: "700px" }}
           >
-            <div className="col-span-1 ">
+            <div className="w-2/12 ">
               <div className="bg-white rounded-t mt-4 p-4 space-y-3 mb-4 shadow-md">
                 <span>Post about</span>
                 <div className="flex flex-row items-center space-x-4 ">
@@ -56,7 +56,10 @@ class Main extends Component {
                 </div>
               </div>
             </div>
-            <div className=" col-span-3 ">
+            <div
+              className="w-6/12"
+              // className="content col-span-3 mr-auto ml-auto"
+            >
               <div>
                 <div className="bg-white rounded-t mt-4  mb-4 shadow-md">
                   <form
@@ -308,16 +311,37 @@ class Main extends Component {
                   );
                 })}
             </div>
-            <div className="col-span-1 ">
+            <div className="w-2/12">
               <div className="bg-white rounded-t mt-4 p-4 space-y-3 mb-4 shadow-md">
                 <span>Top Accounts</span>
                 {this.props.images
+                  .filter(
+                    (v, i, a) =>
+                      a.findIndex((v2) => v2.author === v.author) === i
+                  )
                   .sort((a, b) => a.tipAmount - b.tipAmount)
                   .map((image) => {
                     return (
                       <>
                         <div className="flex flex-row items-center space-x-4 ">
-                          <BookOpenIcon className="h-7" />
+                          <Link
+                            to="/profile"
+                            state={{
+                              id: image.id.toString(),
+                              author: image.author,
+                            }}
+                          >
+                            <img
+                              className="rounded-full"
+                              width="40"
+                              height="40"
+                              src={`data:image/png;base64,${new Identicon(
+                                image.author,
+                                30
+                              ).toString()}`}
+                              alt="identicon"
+                            />
+                          </Link>
                           <span>{ellipseAddress(image.author)}</span>
                         </div>
                       </>

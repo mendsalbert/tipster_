@@ -159,7 +159,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="bg-gray-100 w-full h-full">
+      <div className="bg-gray-100 w-full overflow-x-hidden h-full">
         <Router>
           <Navbar account={this.state.account} />
           <Routes>

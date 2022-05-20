@@ -8,7 +8,7 @@ function Messag({ messag }) {
   return (
     <div
       className={`mx-20  flex flex-row items-center space-x-2 my-1  ${
-        isUserMessage ? "justify-start" : "justify-start"
+        isUserMessage ? "justify-end" : "justify-start"
       }`}
     >
       {/* <div

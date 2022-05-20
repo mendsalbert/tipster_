@@ -13,8 +13,8 @@ import { ellipseAddress } from "../lib/helpers";
 class Navbar extends Component {
   render() {
     return (
-      <nav className="bg-white shadow-lg w-full  flex flex-row items-center justify-between px-24">
-        <div>
+      <nav className="bg-white shadow-lg w-full  flex flex-row items-center justify-between px-20">
+        <div className="hidden md:block">
           <img src="/photo.png" className="w-20" />
         </div>
         <div className="flex flex-row items-center justify-center text-gray-600 space-x-20 py-2">
@@ -31,7 +31,7 @@ class Navbar extends Component {
             <SearchIcon className="h-8 text-green-500" />
           </a>
         </div>
-        <div className="flex flex-row items-center  space-x-6">
+        <div className="flex-row items-center hidden md:flex space-x-6">
           {this.props.account ? (
             <img
               className="ml-2 rounded-full"
