@@ -31,7 +31,7 @@ class Main extends Component {
           <main
             role="main"
             // className="flex flex-row justify-between w-full mx-20 "
-            className="grid grid-col-5  mx-20 "
+            className="grid grid-col-5   "
             // className="col-lg-12 ml-auto mr-auto"
             // style={{ maxWidth: "700px" }}
           >
@@ -56,7 +56,7 @@ class Main extends Component {
                 </div>
               </div>
             </div>
-            <div className="content col-span-3 mr-auto ml-auto">
+            <div className=" col-span-3 ">
               <div>
                 <div className="bg-white rounded-t mt-4  mb-4 shadow-md">
                   <form
