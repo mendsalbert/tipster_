@@ -138,7 +138,7 @@ class Main extends Component {
                           </div> */}
 
                           <img
-                            src={`https://ipfs.infura.io/ipfs/${image.hash}`}
+                            src={image.hash}
                             className="object-cover h-96 w-full"
                           />
                         </div>

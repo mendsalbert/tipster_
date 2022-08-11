@@ -54,7 +54,7 @@ class ProfileBody extends Component {
                       <div>
                         <div class="w-full h-full">
                           <img
-                            src={`https://ipfs.infura.io/ipfs/${image.hash}`}
+                            src={image.hash}
                             className="object-cover h-96 w-full"
                           />
                         </div>
